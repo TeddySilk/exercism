@@ -20,12 +20,10 @@ def recite(start_verse, end_verse):
         day = f"On the {elements[verse-1][0]} day of Christmas my true love gave to me: "
         elements.reverse()
         if verse == 1:
-            gifts = ", ".join([element[1] for element in elements])
-            gifts = gifts + "."
+            gifts = ", ".join([element[1] for element in elements]) + "."
         else:
             gifts = ", ".join([element[1] for element in elements if element[0] != 'first'])
-            gifts = gifts + ", and " + elements[-1][1]
-            gifts = gifts + "."
+            gifts = gifts + ", and " + elements[-1][1] + "."
         output.append(day + gifts)
         
     return output
